@@ -1,0 +1,55 @@
+---
+import { Mail, MapPin, Phone } from "lucide-react";
+
+import { ContactForm } from "@/components/ContactForm";
+---
+
+<section id="contacto" class="relative overflow-hidden bg-mist py-24 text-ink lg:py-32">
+  <div class="absolute -bottom-36 -left-36 size-96 rounded-full bg-sky/20 blur-[100px]"></div>
+  <div class="container-shell relative grid gap-14 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
+    <div>
+      <p class="section-kicker">Contacto</p>
+      <h2 class="mt-5 text-4xl leading-tight font-semibold tracking-[-0.04em] sm:text-5xl">
+        Construyamos algo que importe.
+      </h2>
+      <p class="mt-6 max-w-md leading-7 text-ink/60">
+        Contanos qué desafío querés resolver. Nuestro equipo te va a ayudar a encontrar el mejor
+        punto de partida.
+      </p>
+
+      <ul class="mt-10 grid gap-5 text-sm font-semibold">
+        <li class="flex items-center gap-4">
+          <span class="grid size-11 place-items-center rounded-xl bg-wave/10 text-ocean">
+            <Mail size={20} />
+          </span>
+          <a href="mailto:codewave@unahur.edu.ar" class="hover:text-wave">
+            codewave@unahur.edu.ar
+          </a>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="grid size-11 place-items-center rounded-xl bg-wave/10 text-ocean">
+            <Phone size={20} />
+          </span>
+          <a href="tel:+5491112345678" class="hover:text-wave">+54 9 11 1234-5678</a>
+        </li>
+        <li class="flex items-center gap-4">
+          <span class="grid size-11 place-items-center rounded-xl bg-wave/10 text-ocean">
+            <MapPin size={20} />
+          </span>
+          <a
+            href="https://maps.google.com/?q=Ausebione+8,+Hurlingham,+Buenos+Aires"
+            target="_blank"
+            rel="noreferrer"
+            class="hover:text-wave"
+          >
+            Ausebione 8, Hurlingham, Buenos Aires
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="rounded-[2rem] border border-ink/10 bg-white/70 p-6 shadow-2xl shadow-ocean/10 backdrop-blur-sm sm:p-9">
+      <ContactForm client:visible />
+    </div>
+  </div>
+</section>

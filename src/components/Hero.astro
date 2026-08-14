@@ -1,0 +1,65 @@
+---
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+---
+
+<section id="inicio" class="grid-noise relative min-h-[760px] overflow-hidden pt-20">
+  <div class="absolute -left-44 top-20 size-[34rem] rounded-full bg-wave/20 blur-[140px]"></div>
+  <div class="absolute -right-40 bottom-0 size-[30rem] rounded-full bg-leaf/10 blur-[130px]"></div>
+
+  <div class="container-shell relative grid min-h-[680px] items-center gap-14 py-16 lg:grid-cols-[1.05fr_.95fr]">
+    <div class="relative z-10">
+      <p class="section-kicker mb-7">Tecnología con propósito</p>
+      <h1 class="max-w-3xl text-5xl leading-[0.98] font-semibold tracking-[-0.055em] sm:text-6xl lg:text-[5.1rem]">
+        Creamos software que
+        <span class="text-sky">mueve ideas</span>
+        hacia adelante.
+      </h1>
+      <p class="mt-7 max-w-xl text-base leading-8 text-white/65 sm:text-lg">
+        Somos el equipo de soluciones digitales de la UNAHUR. Diseñamos y desarrollamos productos
+        tecnológicos que transforman organizaciones y mejoran experiencias.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="#contacto"
+          class="group inline-flex items-center gap-3 rounded-full bg-leaf px-6 py-3.5 font-extrabold text-ink transition hover:-translate-y-1 hover:bg-white"
+        >
+          Empecemos un proyecto
+          <ArrowUpRight className="transition group-hover:rotate-45" size={19} />
+        </a>
+        <a
+          href="#casos"
+          class="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3.5 font-bold text-white transition hover:border-sky hover:text-sky"
+        >
+          Ver nuestro trabajo
+          <ArrowDownRight size={19} />
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-xl lg:ml-auto">
+      <div class="absolute -inset-3 rotate-3 rounded-[2.2rem] border border-sky/30"></div>
+      <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-navy shadow-2xl shadow-black/35 sm:aspect-[5/4] lg:aspect-[4/5]">
+        <img
+          src="/assets/foto1-CAOGKg8m.jpeg"
+          alt="Equipo de desarrollo colaborando en un proyecto"
+          class="size-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-7">
+          <p class="max-w-[13rem] text-sm leading-6 font-semibold text-white/80">
+            Talento universitario aplicado a desafíos reales.
+          </p>
+          <div class="grid size-16 shrink-0 place-items-center rounded-full bg-sky text-ink">
+            <span class="font-display text-lg font-bold">CW</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute -left-5 top-8 rounded-2xl border border-white/10 bg-ink/90 px-5 py-4 shadow-xl backdrop-blur-md sm:-left-12">
+        <strong class="block font-display text-2xl text-leaf">+8</strong>
+        <span class="text-xs font-bold tracking-wide text-white/60 uppercase">servicios</span>
+      </div>
+    </div>
+  </div>
+</section>

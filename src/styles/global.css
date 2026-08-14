@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #061421;
+  --color-navy: #08243a;
+  --color-ocean: #0b4266;
+  --color-wave: #009cce;
+  --color-sky: #45d7f4;
+  --color-leaf: #69bf44;
+  --color-mist: #e9f7fa;
+  --color-muted: #9ab2c2;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--color-ink);
+    color: white;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    outline-color: var(--color-sky);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-leaf);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .container-shell {
+    width: min(100% - 2rem, 75rem);
+    margin-inline: auto;
+  }
+
+  .section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-sky);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .section-kicker::before {
+    width: 1.5rem;
+    height: 2px;
+    background: currentColor;
+    content: "";
+  }
+
+  .grid-noise {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

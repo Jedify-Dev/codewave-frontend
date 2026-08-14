@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Contact from "@/components/Contact.astro";
+import Hero from "@/components/Hero.astro";
+import Services from "@/components/Services.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import { SiteHeader } from "@/components/SiteHeader";
+import Work from "@/components/Work.astro";
+---
+
+<BaseLayout>
+  <SiteHeader client:load />
+  <main>
+    <Hero />
+    <Services />
+    <Work />
+
+    <aside class="relative overflow-hidden bg-leaf py-16 text-ink">
+      <div class="container-shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div class="max-w-2xl">
+          <p class="text-xs font-extrabold tracking-[0.18em] uppercase">Talento UNAHUR</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
+            El próximo gran equipo puede empezar acá.
+          </h2>
+        </div>
+        <a
+          href="https://bolsadetrabajo.unahur.edu.ar/"
+          target="_blank"
+          rel="noreferrer"
+          class="shrink-0 rounded-full bg-ink px-6 py-3.5 font-extrabold text-white transition hover:-translate-y-1 hover:bg-ocean"
+        >
+          Bolsa de trabajo ↗
+        </a>
+      </div>
+    </aside>
+
+    <Contact />
+  </main>
+  <SiteFooter />
+</BaseLayout>

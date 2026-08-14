@@ -1,0 +1,58 @@
+---
+import { ArrowUp } from "lucide-react";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/10 bg-ink py-10">
+  <div class="container-shell grid items-center gap-8 md:grid-cols-3">
+    <a href="#inicio" aria-label="Volver al inicio" class="w-fit">
+      <img
+        src="/assets/codewaveBlanco-aqys6bY2.png"
+        alt="Codewave"
+        class="h-auto w-40"
+      />
+    </a>
+
+    <p class="text-sm text-white/45 md:text-center">
+      © {year} Codewave · Universidad Nacional de Hurlingham
+    </p>
+
+    <div class="flex items-center gap-3 md:justify-end">
+      <a
+        href="https://www.facebook.com/codewavear"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Facebook"
+        class="grid size-10 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-sky hover:text-sky"
+      >
+        <span class="text-xs font-black">f</span>
+      </a>
+      <a
+        href="https://www.instagram.com/codewavear/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+        class="grid size-10 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-sky hover:text-sky"
+      >
+        <span class="text-xs font-black">ig</span>
+      </a>
+      <a
+        href="https://www.linkedin.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="LinkedIn"
+        class="grid size-10 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-sky hover:text-sky"
+      >
+        <span class="text-xs font-black">in</span>
+      </a>
+      <a
+        href="#inicio"
+        aria-label="Volver arriba"
+        class="ml-2 grid size-10 place-items-center rounded-full bg-leaf text-ink transition hover:-translate-y-1"
+      >
+        <ArrowUp size={17} />
+      </a>
+    </div>
+  </div>
+</footer>
